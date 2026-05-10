@@ -238,7 +238,10 @@ input{
     <header>
         <div class="header-top">
             <div class="logo">ESG 循環維修平台</div>
-            <a href="#" class="member-btn" onclick="showPage('memberPage')">會員中心</a>
+            <a href="#" onclick="showPage('memberPage')">
+    <img src="https://files.catbox.moe/4ajj94.jpg"
+         style="width:45px;height:45px;border-radius:50%;object-fit:cover;border:2px solid white;">
+</a>
         </div>
     </header>
 
@@ -422,8 +425,10 @@ input{
             <!-- 基本資料 -->
             <div class="option" style="display:block;">
                 <h3>👤 基本資料</h3>
+<img src="https://files.catbox.moe/4ajj94.jpg"
+     style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:10px 0;">
                 <p>
-                    姓名：劉玉華<br>
+                    姓名：郭亦偵<br>
                     等級：ESG綠色會員
                 </p>
             </div>
@@ -432,6 +437,14 @@ input{
             <div class="option" style="display:block;">
                 <h3>⭐ ESG點數</h3>
                 <p>目前累積：28 點</p>
+            </div>
+
+            <!-- 維修項目 -->
+            <div class="option" style="display:block;">
+                <h3>維修項目</h3>
+                <p>iPhone 11 電池更換
+金額：2200元｜狀態：已完成</p><p>iPhone 15 螢幕維修
+金額：3600元｜狀態：處理中</p>
             </div>
 
         </div>
@@ -469,9 +482,9 @@ function aiAnalyze() {
     resBox.style.display = "block";
     
     if(input.includes("螢幕")) {
-        resBox.innerHTML = "<h3>AI建議：更換二手螢幕</h3><p>預估省下 NT$3700<br>ESG點數：+2 點</p>";
+        resBox.innerHTML = "<h3>Apple Inc. 的螢幕以高解析度與精準色彩著稱，採用 Retina、P3 廣色域與 True Tone 等技術，讓畫面細膩且自然，不論是內建於 Mac、iPhone、iPad，或外接的 Apple Studio Display 與 Pro Display XDR，都強調亮度、對比與色彩一致性，適合從日常使用到專業影像製作等各種需求。<br>AI建議：更換二手螢幕</h3><p>預估省下 NT$3700<br>ESG點數：+2 點</p>";
     } else if(input.includes("電池")) {
-        resBox.innerHTML = "<h3>AI建議：更換二手電池</h3><p>預估省下 NT$1100<br>ESG點數：+1 點</p>";
+        resBox.innerHTML = "<h3>iPhone 電池採用鋰離子技術（Lithium-ion），具備充電快、密度高、輕巧且續航久等特性。為確保安全性，建議使用原廠電池，其能與系統完美相容，減少爆炸、過熱風險。通常當電池健康度低於 80% 或明顯耗電時建議更換，平時應維持 20%~80% 電量以延長壽命。<br>AI建議：更換二手電池</h3><p>預估省下 NT$1100<br>ESG點數：+1 點</p>";
     } else {
         resBox.innerHTML = "<h3>AI分析中...</h3><p>建議將設備帶至現場檢測，或輸入更具體的故障描述。</p>";
     }
